@@ -1,0 +1,8 @@
+.showPasswordButton {
+    background-color: rgb(34, 115, 255);
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}

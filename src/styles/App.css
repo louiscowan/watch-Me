@@ -1,0 +1,275 @@
+@global {
+  
+}
+
+:root {
+  --background-color: rgb(248, 248, 248);
+  --color-blue: rgb(34, 115, 255);
+}
+
+.App-header {
+  font-size: calc(10px + 2vmin);
+  color: black;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.createWatchListing {
+  background-color: white;
+  color:#282c34;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.watchListings {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2em;
+  max-width: 1500px;
+}
+
+.navBar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  top: 0px;
+  max-height: 54px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 50;
+  margin-bottom: 10px;
+}
+
+.navbar--hidden {
+  transform: translateY(-60px);
+}
+
+.nav-element {
+  display: block;
+  height: 2rem;
+  background-color: rgb(225, 225, 224);
+  text-decoration: none;
+  color: rgb(22, 21, 21);
+  display: flex;
+  border-radius: 10px;
+}
+
+.NavButton {
+  display: block;
+  font-size: large;
+  height: 54px;
+  border-radius: 4px;
+  background-color: var(--color-blue);
+  color: white;
+  padding: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-right: 23px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.NavButton:hover {
+  background-color: rgb(30, 167, 252);
+}
+
+.acountDetailsDiv {
+  height: fit-content;
+  max-width: fit-content;
+  z-index: 51;
+  position: absolute;
+  right: 2px;
+  top: 62px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  color: black;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+li {
+  font-size: 16px;
+  list-style-type: none;
+  padding: 8px 8px 8px 8px;
+}
+
+.li-link:hover {
+  background-color: rgb(174, 167, 167);
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  padding-bottom: 5px;
+  margin-bottom: 6px;
+}
+
+.hr {
+  width: 100%;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  margin: 8px 0 8px 0
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.search-bar {
+  margin-left:  0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: fit-content;
+}
+
+.search-bar input {
+  padding: 0 0.5em;
+  border: 0;  
+  background-color: white;
+}
+
+.search-button {
+  display: block;         
+  height: 21px;
+  width: 21px;
+  cursor: pointer;
+}
+
+.search-button img {
+  border-radius: 50%;
+  display: block;
+  border: none;
+}
+
+.watch-card {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  cursor: pointer;
+  margin: 8px;
+  background-color: white;
+  color: black;
+  transition: transform 0.1s ease-in-out;
+}
+
+.watch-card:hover {
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01) 
+}
+
+.watch-card-image-container {
+  height: 0;
+  padding-bottom: 75%; /* 4:3 aspect ratio */
+  position: relative;
+}
+
+.watch-card-image {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.watch-card-details {
+  padding: 16px;
+}
+
+.watch-card-name {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.watch-card-price {
+  font-size: 1.1rem;
+  margin: 8px 0 0 0;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--color-blue);
+  border-radius: 50px;
+  height: 50px;
+}
+
+.searchbar-input {
+  --width: 170px;
+  border: none;
+  outline: none;
+  flex: 1;
+  height: 48px;
+  border-radius: 50px 0px 0px 50px;
+  width: var(--width);
+  transition: width 1s ease-in-out;
+  font-size: 20px;
+}
+
+input[placeholder="Search Watches ..."] {
+  padding-left: 25px;
+}
+
+.searchbar-input:focus {
+  width: calc(var(--width) + 100px);
+  transition: width 1s ease-in-out;
+}
+
+button[type="submit"]{
+  width: 40px;
+  height: 50px;
+  border-radius: 0px 50px 50px 0px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.fa-search {
+  color: var(--color-blue);
+}
+
+.fa-search:hover {
+  text-shadow: 2px 2px rgb(145, 182, 246);
+}
+
+.userButton  {
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.userButton:hover {
+  border-color: var(--color-blue);
+  background-color: black;
+}
+
+.fa-user-secret:hover {
+  color: var(--color-blue)
+}
+
+.logo {
+  font-family: 'Gloock', serif;
+  margin: auto;
+  margin-left: 10px;
+  margin-right: 25px;
+  cursor: pointer;
+  font-size: 40.9px;
+}
+
+.logo-search-div {
+  display: flex;
+  flex-direction: row;
+}
+

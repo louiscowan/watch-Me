@@ -1,0 +1,75 @@
+
+.watchCard {
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    cursor: pointer;
+    margin: 8px;
+    background-color: white;
+    color: black;
+    transition: transform 0.1s ease-in-out;
+    height: fit-content;
+  }
+  
+  .watchCard:hover {
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01) 
+  }
+  
+  .watchCardImageContainer {
+    height: 0;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+    position: relative;
+  }
+  
+  .watchCardImage {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .watchCardDetails {
+    padding: 16px;
+  }
+  
+  .watchCardName {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .watchCardPrice {
+    font-size: 1.1rem;
+    margin: 8px 0 0 0;
+  }
+
+  .watchListings {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2em;
+    max-width: 1300px;
+  }
+
+.deleteButton {
+    background-color: rgb(34, 115, 255);
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+.deleteButton:hover {
+    background-color: rgb(33, 151, 247);
+}
+
+.listingButtonDiv{
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,73 @@
+.listing {
+    width: 100%;
+    max-height: 1000px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.watchImage {
+    height: 550px;
+    width: 550px;
+    object-fit: cover;
+    position: relative;
+    right: 80px;
+    border: 1px solid black;
+}
+
+.watchInfo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 30px;
+    min-width: 240px;
+}
+
+hr {
+    height: 1px;
+    width: 100px;
+    background-color: black;
+    margin: 0;
+}
+
+.buyButton {
+    height: 40px;
+    min-width:  160px;
+    transition: background-color 0.2s, transform 0.2s;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-color: #141415;
+    font-size: large;
+    margin-top: 6px;
+    max-width: fit-content;
+}
+
+.buyButton:hover {
+    color: white;
+    background: #1870f4;
+}
+
+.emailButton {
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+i {
+    padding-right: 4px;
+}
+
+.watchDescription {
+    font-size:  18px;
+}
+
+.contactButtonDiv {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0px;
+}
+
