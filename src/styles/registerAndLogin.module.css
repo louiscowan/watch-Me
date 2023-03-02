@@ -45,6 +45,14 @@ input[id="password"] {
     margin-bottom: 5px;
 }
 
+input[id="register-username"] {
+    margin-bottom: 5px;
+}
+
+input[id="register-password"] {
+    margin-bottom: 5px;
+}
+
 .login {
     background-color: rgb(34, 115, 255);
     color: white;
@@ -54,6 +62,19 @@ input[id="password"] {
     border: none;
     font-size: 22px;
     width: fit-content;
+    margin-bottom: 20px;
+}
+
+.register {
+    background-color: rgb(34, 115, 255);
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 22px;
+    width: fit-content;
+    margin-top: 15px;
     margin-bottom: 20px;
 }
 

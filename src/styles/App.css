@@ -98,7 +98,7 @@ li {
   padding: 8px 8px 8px 8px;
 }
 
-.li-link:hover {
+.section-link:hover {
   background-color: rgb(237, 234, 234);
   cursor: pointer;
 }

@@ -14,7 +14,8 @@ function Register() {
 
     const navigate = useNavigate()
 
-    function register () {
+    function register (e) {
+        e.preventDefault()
         createUserWithEmailAndPassword(
             auth,
             registerEmail,
@@ -47,41 +48,52 @@ function Register() {
     }
 
     return (
-        <div>
-            <div>
+        <div className={styles.loginDiv}>
+            <form className={styles.loginForm} onSubmit={register}>
                 <h3>Sign Up</h3>
-                <label htmlFor="email">Email</label>
-                <input 
-                    id="email"
-                    value={registerEmail}
-                    onChange={(e) => {
-                        setRegisterEmail(e.target.value)
-                    }}
-                />
+                <section>
+                    <div className={styles.theDiv}>
+                        <label htmlFor="email">Email</label>
+                        <input 
+                            id="email"
+                            value={registerEmail}
+                            onChange={(e) => {
+                                setRegisterEmail(e.target.value)
+                            }}
+                        />
+                    </div>
+                </section>
 
-                <label htmlFor="register-password">Password</label>
-                <input 
-                    type={password}
-                    value={registerPassword}
-                    id="register-password"
-                    onChange={(e) => {
-                        setRegisterPassword(e.target.value)
-                    }}
-                />
+                <section>
+                    <div className={styles.theDiv}>
+                        <label htmlFor="register-password">Password</label>
+                        <input 
+                            type={password}
+                            value={registerPassword}
+                            id="register-password"
+                            onChange={(e) => {
+                                setRegisterPassword(e.target.value)
+                            }}
+                        />
+                        <button className={styles.showPasswordButton} onClick={showPassword}>Show Password</button>
+                    </div>
+                </section>
 
-                <button className={styles.showPasswordButton} onClick={showPassword}>Show Password</button>
-
-                <label htmlFor="register-username">Username</label>
-                <input 
-                    id="register-username"
-                    value={username}
-                    onChange={(e) => {
-                        setUsername(e.target.value)
-                    }}
-                />
-                <button onClick={register}>Register</button>
+                <section>
+                    <div className={styles.theDiv}>
+                        <label htmlFor="register-username">Username</label>
+                        <input 
+                            id="register-username"
+                            value={username}
+                            onChange={(e) => {
+                                setUsername(e.target.value)
+                            }}
+                        />
+                    </div>
+                </section>
+                <button className={styles.register}>Register</button>
                 <Link to='/login'>Login</Link >
-            </div>
+            </form>
         </div>
     )
 }

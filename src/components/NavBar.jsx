@@ -43,12 +43,12 @@ function NavBar() {
                             <li>{user.email}</li>
                         </section>
                     <hr className="hr"/>
-                        <section>
-                            <li className="li-link"><Link onClick={() => {setAccountClicked(false)}} className="link" to={`/account/:${user.uid}`}>Your Watches</Link></li>
+                        <section className="section-link">
+                            <li ><Link onClick={() => {setAccountClicked(false)}} className="link" to={`/account/:${user.uid}`}>Your Watches</Link></li>
                         </section>
                     <hr className="hr"/>
-                        <section>
-                            <li  className="li-link" onClick={logout}>Sign Out</li>
+                        <section className="section-link">
+                            <li onClick={logout}>Sign Out</li>
                         </section>
                     </ul>
                 </div>   
