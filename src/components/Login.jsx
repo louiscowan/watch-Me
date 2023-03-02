@@ -36,28 +36,41 @@ function Login() {
     }
 
     return (
-        <div>
-            <form onSubmit={login}>
+        <div className={styles.loginDiv}>
+            <form onSubmit={login} className={styles.loginForm}>
                 <h3>Welcome Back!</h3>
-                <label htmlFor="username">Username</label>
-                <input 
-                placeholder="Email..."
-                onChange={(e) => {
-                    setLoginEmail(e.target.value)
-                }}
-                value={loginEmail}
-                />
 
-                <input 
-                placeholder="Password..."
-                type={password}
-                onChange={(e) => {
-                    setLoginPassword(e.target.value)
-                }} 
-                value={loginPassword}
-                />
-                <button className={styles.showPasswordButton} onClick={showPassword}>Show Password</button>
-                <button>Login</button>
+                <section>
+                    <div className={styles.theDiv}>
+                        <label htmlFor="email">Email</label>
+                        <input 
+                        id="email"
+                        placeholder="Email..."
+                        onChange={(e) => {
+                            setLoginEmail(e.target.value)
+                        }}
+                        value={loginEmail}
+                        />
+                    </div>
+                </section>
+
+                <section>
+                    <div className={styles.theDiv}>
+                        <label htmlFor="password">Password</label>
+                        <input 
+                        id="password"
+                        placeholder="Password..."
+                        type={password}
+                        onChange={(e) => {
+                            setLoginPassword(e.target.value)
+                        }} 
+                        value={loginPassword}
+                        />
+                        <button className={styles.showPasswordButton} onClick={showPassword}>Show Password</button>
+                    </div>
+                </section>
+
+                <button className={styles.login}>Login</button>
                 <Link to='/register'>Register</Link >
             </form>
         </div>

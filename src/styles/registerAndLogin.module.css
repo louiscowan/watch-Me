@@ -1,8 +1,71 @@
 .showPasswordButton {
+    background-color: rgb(122, 123, 125);
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.showPasswordButton:hover {
+    background-color: rgb(146, 147, 148);
+}
+
+.loginDiv {
+    max-height: fit-content;
+    min-height: fit-content;
+    max-width: 600px;
+    min-width: fit-content;
+    background-color: white;
+    box-shadow: rgba(0, 0, 255, 0.2) 0px 7px 29px 0px;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    max-width: 300px;
+}
+
+input[id="email"] {
+    margin-bottom: 20px;
+}
+
+input[id="password"] {
+    margin-bottom: 5px;
+}
+
+.login {
     background-color: rgb(34, 115, 255);
     color: white;
     padding: 8px;
     border-radius: 8px;
     cursor: pointer;
     border: none;
+    font-size: 22px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+}
+
+.theDiv {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 }
