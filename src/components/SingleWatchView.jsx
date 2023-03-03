@@ -52,7 +52,7 @@ function SingleWatchView() {
                             <p>${price}</p>
                                 <hr></hr>
                             <p>{watch.hasBoxPapers}</p>
-                                <hr></hr>
+                                <hr />
                             <div className={styles.contactButtonDiv}>
                                 {contactDetails 
                                 ? <button onClick={() => setContactDetails(false)} className={styles.buyButton}><i class="fa fa-solid fa-phone"></i>Contact Details</button>

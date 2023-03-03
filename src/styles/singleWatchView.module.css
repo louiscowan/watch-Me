@@ -23,6 +23,7 @@
     position: relative;
     right: 30px;
     min-width: 240px;
+    height: 550px;
 }
 
 hr {
@@ -67,7 +68,7 @@ i {
 .contactButtonDiv {
     display: flex;
     flex-direction: column;
-    position: absolute;
     bottom: 0px;
+    position: absolute;
 }
 
