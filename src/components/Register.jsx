@@ -33,7 +33,7 @@ function Register() {
                 if(registerPassword.length < 6) {
                     alert("Password must be at least 6 characters")
                 } else {
-                    console.log(error.message)
+                   alert(error.message)
                 }
             }
             )

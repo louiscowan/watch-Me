@@ -20,6 +20,7 @@ function NavBar() {
         const logout = async () => {
             await signOut(auth)
             setAccountClicked(false)
+            navigate('/')
         }
     
 
