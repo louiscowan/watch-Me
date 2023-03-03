@@ -1,6 +1,6 @@
 import { onAuthStateChanged, signOut } from "firebase/auth"
 import React, { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import {  useNavigate } from "react-router-dom"
 import { auth } from "../firebase.js"
 import NavButton from './NavButton.jsx'
 import SearchBar from "./SearchBar.jsx"
@@ -42,13 +42,17 @@ function NavBar() {
                             <li>{user.displayName}</li>
                             <li>{user.email}</li>
                         </section>
+                        <hr className="hr"/>
+                        <section onClick={() => {
+                            setAccountClicked(false)
+                            navigate(`/account/:${user.uid}`)
+                            }} 
+                            className="section-link">
+                            <li >Your Watches</li>
+                        </section>   
                     <hr className="hr"/>
-                        <section className="section-link">
-                            <li ><Link onClick={() => {setAccountClicked(false)}} className="link" to={`/account/:${user.uid}`}>Your Watches</Link></li>
-                        </section>
-                    <hr className="hr"/>
-                        <section className="section-link">
-                            <li onClick={logout}>Sign Out</li>
+                        <section onClick={logout} className="section-link">
+                            <li>Sign Out</li>
                         </section>
                     </ul>
                 </div>   
