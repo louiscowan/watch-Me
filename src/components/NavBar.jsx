@@ -37,21 +37,21 @@ function NavBar() {
                 }
             </div>
             {accountClicked 
-            ?   <div className="acountDetailsDiv">
+            ?   <div className="accountDetailsDiv">
                     <ul>
                         <section>
                             <li>{user.displayName}</li>
                             <li>{user.email}</li>
-                        </section>
                         <hr className="hr"/>
+                        </section>
                         <section onClick={() => {
                             setAccountClicked(false)
                             navigate(`/account/:${user.uid}`)
                             }} 
                             className="section-link">
                             <li >Your Watches</li>
-                        </section>   
                     <hr className="hr"/>
+                        </section>   
                         <section onClick={logout} className="section-link">
                             <li>Sign Out</li>
                         </section>
