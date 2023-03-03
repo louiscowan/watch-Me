@@ -1,0 +1,94 @@
+.createWatchListing {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .createWatchListing h2 {
+    text-align: center;
+    color: rgb(34, 115, 255);
+    margin-bottom: 20px;
+  }
+  
+  .createWatchListing form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .createWatchListing input[type="file"],
+  .createWatchListing input[type="number"],
+  .createWatchListing input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  .createWatchListing input[type="file"] {
+    border: 1px solid rgb(34, 115, 255);
+  }
+  
+  .createWatchListing input[type="file"]:hover,
+  .createWatchListing input[type="file"]:focus,
+  .createWatchListing input[type="number"]:hover,
+  .createWatchListing input[type="number"]:focus,
+  .createWatchListing input[type="text"]:hover,
+  .createWatchListing input[type="text"]:focus {
+    outline: none;
+    border-color: rgb(34, 115, 255);
+  }
+  
+  .createWatchListing input[type="file"]::-webkit-file-upload-button {
+    background-color: rgb(34, 115, 255);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .createWatchListing input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #0969da;
+  }
+  
+  .createWatchListing fieldset {
+    border: none;
+    margin-bottom: 10px;
+  }
+  
+  .createWatchListing fieldset legend {
+    font-size: 16px;
+    color: rgb(34, 115, 255);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .createWatchListing label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .createWatchListing button {
+    background-color: rgb(34, 115, 255);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .createWatchListing button:hover {
+    background-color: #0969da;
+  }
