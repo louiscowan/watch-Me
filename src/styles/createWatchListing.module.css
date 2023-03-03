@@ -92,3 +92,8 @@
   .createWatchListing button:hover {
     background-color: #0969da;
   }
+
+  span {
+    color: red;
+  }
+
