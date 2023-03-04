@@ -42,16 +42,16 @@ function NavBar() {
                         <section>
                             <li>{user.displayName}</li>
                             <li>{user.email}</li>
-                        <hr className="hr"/>
                         </section>
+                        <hr className="hr"/>
                         <section onClick={() => {
                             setAccountClicked(false)
                             navigate(`/account/:${user.uid}`)
                             }} 
                             className="section-link">
                             <li >Your Watches</li>
-                    <hr className="hr"/>
                         </section>   
+                    <hr className="hr"/>
                         <section onClick={logout} className="section-link">
                             <li>Sign Out</li>
                         </section>
