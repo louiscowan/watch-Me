@@ -1,8 +1,6 @@
 import React,{ useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
-import image from '../images/search.png'
-
 function SearchBar () {
     const [ watchSearch, setWatchSearch ] = useState("") 
     const [ focus, setFocus ] = useState(false)

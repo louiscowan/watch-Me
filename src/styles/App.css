@@ -269,6 +269,7 @@ button[type="submit"]{
   margin-right: 25px;
   cursor: pointer;
   font-size: 40.9px;
+  color: rgb(98, 97, 97);
 }
 
 .logo-search-div {
