@@ -71,7 +71,7 @@ function CreateWatchListing() {
                     }} 
                     className={styles.input}
                 />
-                <label htmlFor="price">Name of watch<span>  *</span></label>
+                <label htmlFor="price">Listing Price<span>  *</span></label>
                 <input 
                     type="number" 
                     id="price"

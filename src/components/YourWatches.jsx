@@ -21,7 +21,6 @@ function YourWatches (props) {
     }
 
     return (
-        <>
             <div className={styles.watchCard}>
                 <div className={styles.watchCardImageContainer}>
                     <img src={watch.imageUrl} alt={watch.name} className={styles.watchCardImage} />
@@ -32,7 +31,6 @@ function YourWatches (props) {
                     <button className={styles.deleteButton} onClick={() => deleteUser()}>Delete Listing</button>
                 </div>
             </div>
-       </>
     )
 }
 

@@ -9,12 +9,7 @@
     background-color: white;
     color: black;
     transition: transform 0.1s ease-in-out;
-    height: fit-content;
-  }
-  
-  .watchCard:hover {
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
-    transform: scale(1.01) 
+    max-height: 345;
   }
   
   .watchCardImageContainer {
@@ -34,6 +29,10 @@
   
   .watchCardDetails {
     padding: 16px;
+    height: 143px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   .watchCardName {

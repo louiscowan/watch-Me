@@ -160,6 +160,7 @@ ul {
   background-color: white;
   color: black;
   transition: transform 0.1s ease-in-out;
+  max-height: 345px;
 }
 
 .watch-card:hover {
