@@ -43,6 +43,7 @@ function CreateWatchListing() {
         const imageRef = ref(storage, imageName)   
         uploadBytes(imageRef, imageUpload).then((snapshot) => {
             navigate('/')
+            window.location.reload()
         })
     }
 
@@ -71,7 +72,7 @@ function CreateWatchListing() {
                     }} 
                     className={styles.input}
                 />
-                <label htmlFor="price">Name of watch<span>  *</span></label>
+                <label htmlFor="price">Watch Price<span>  *</span></label>
                 <input 
                     type="number" 
                     id="price"
