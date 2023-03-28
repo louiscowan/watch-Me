@@ -259,8 +259,14 @@ button[type="submit"]{
   background-color: black;
 }
 
+.fa-user-secret {
+  height: fit-content;
+  padding-right: 20px;
+}
+
 .fa-user-secret:hover {
-  color: var(--color-blue)
+  color: var(--color-blue);
+  cursor: pointer;
 }
 
 .logo {
