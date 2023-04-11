@@ -35,7 +35,9 @@ function NavBar() {
   return (
     <nav className={`navBar`}>
       <div className="logo-search-div">
-        <h1 onClick={() => navigate('/')} className="logo">Watch Me</h1>
+        <header>
+          <h1 onClick={() => navigate('/')} className="logo">Watch Me</h1>
+        </header>
         <SearchBar />
       </div>
       <div className="user-div">
