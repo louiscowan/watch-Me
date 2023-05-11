@@ -12,6 +12,7 @@ import SingleWatchView from './SingleWatchView.jsx'
 import Login from './Login.jsx';
 import YourAccount from './YourAccount.jsx';
 import Register from './Register.jsx';
+import WatchBrands from './WatchBrands.jsx';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -22,6 +23,7 @@ function App() {
   return (
     <main className='App App-header'>
       <NavBar />      
+      <WatchBrands/>
         <Provider store={store}>
           <Routes>
             <Route path='/' element={<Home />} />

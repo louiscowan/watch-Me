@@ -4,10 +4,7 @@ import { useSelector } from "react-redux"
 
 import WatchListings from "./WatchListings"
 
-import { db, storage } from '../firebase'
 import 'firebase/storage'
-import { collection, getDocs, addDoc, updateDoc, doc, deleteDoc  } from 'firebase/firestore' 
-import { ref, uploadBytes, listAll, getDownloadURL, updateMetadata } from "firebase/storage"
 
 function SearchedWatches () {
     const { searchedWatch } = useParams()
@@ -28,7 +25,9 @@ function SearchedWatches () {
 
     return (
         <div className="watchListings">
-            {searchedWatches ? searchedWatches.map(watch => <WatchListings key={watch.id} watch={watch}/>) : null}
+            {searchedWatches 
+            ? searchedWatches.map(watch => <WatchListings key={watch.id} watch={watch}/>) 
+            : <p>There are no current listings for your search.</p>}
         </div>
     )
 }

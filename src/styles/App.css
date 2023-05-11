@@ -284,3 +284,22 @@ button[type="submit"]{
   flex-direction: row;
 }
 
+.brandArrDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.brandButton {
+  margin: 8px;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: large;
+  border: 2px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.brandButton:hover {
+  border: 2px solid var(--color-blue)
+}
+

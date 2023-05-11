@@ -11,6 +11,7 @@ import WatchListings from './WatchListings';
 import { addUser, addWatchesAction } from '../actions';
 import { onAuthStateChanged } from 'firebase/auth';
 
+
 function Home() {
 
   const watchCollectionRef = collection(db, "watches")
