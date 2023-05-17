@@ -3,10 +3,14 @@ import { useNavigate } from "react-router-dom";
 
 function WatchBrands () {
     const navigate = useNavigate()
-    const watchBrandsArr = ["Rolex", "Audemar Piguet", "Richard Mille", "F.P. Journe", "Apple", "Omega", "Jaeger Le-Coultre", "Patek Phillipe", "Grand Seiko"]
+    const watchBrandsArr = ["All", "Rolex", "Audemar Piguet", "Richard Mille", "F.P. Journe", "Apple", "Omega", "Jaeger Le-Coultre", "Patek Phillipe", "Grand Seiko"]
 
     function showBrandWatches (brand) {
-        navigate(`${brand}`)
+        if(brand === "All") {
+            navigate("/")
+        } else {
+            navigate(`${brand}`)
+        }
     }
 
     return (
