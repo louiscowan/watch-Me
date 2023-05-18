@@ -58,19 +58,19 @@ function Login() {
                     <div className={styles.theDiv}>
                         <label htmlFor="password">Password</label>
                         <input 
-                        id="password"
-                        placeholder="Password..."
-                        type={password}
-                        onChange={(e) => {
-                            setLoginPassword(e.target.value)
-                        }} 
-                        value={loginPassword}
+                            id="password"
+                            placeholder="Password..."
+                            type={password}
+                            onChange={(e) => {
+                                setLoginPassword(e.target.value)
+                            }} 
+                            value={loginPassword}
                         />
                         <button className={styles.showPasswordButton} onClick={showPassword}>Show Password</button>
                     </div>
                 </section>
 
-                <button className={styles.login}>Login</button>
+                <button className={styles.login} onClick={Login}>Login</button>
                 <Link to='/register'>Register</Link >
             </form>
         </div>
