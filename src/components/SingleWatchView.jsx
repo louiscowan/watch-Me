@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { storage } from '../firebase'
+import { db, storage } from '../firebase'
 import 'firebase/storage'
 import { ref, getDownloadURL} from "firebase/storage"
 
 import styles from'../styles/singleWatchView.module.css'
+import { collection, getDocs } from "firebase/firestore";
 
 function SingleWatchView() {
     const [ watch, setWatch ] = useState() 
@@ -18,7 +19,7 @@ function SingleWatchView() {
     const watches = useSelector(state => state.watches)
     
     useEffect(() => {
-        if(watches) {
+        if(watches.length > 0) {
        const foundWatch = watches.find(watch => watch.id === watchId)
        setWatch(foundWatch)
 
@@ -27,11 +28,35 @@ function SingleWatchView() {
             .then(res => {
               setImageUrl(res)
             })
+        } else {
+            console.log("type of watch", typeof watchId, "watch id", watchId)
+            const getWatches = async () => {
+                const watchCollectionRef = collection(db, "watches")
+                const watchData = await getDocs(watchCollectionRef)
+                let singleWatch
+                await watchData.docs.map((doc) => {
+                    if(doc.id === watchId) {
+                        console.log("doc id", doc.id)
+                        singleWatch = {...doc.data(), id: doc.id}
+                        setWatch({...doc.data(), id: doc.id})
+                    }
+                    const imageRef = ref(storage, singleWatch.watchImageUrl)
+                    getDownloadURL(imageRef)
+                    .then(res => {
+                    setImageUrl(res)
+                    })
+                })
+                }
+            getWatches()
         }
         
     },[])
 
+
+
+
     useEffect(() => {
+        console.log("watch", watch)
        if(watch) {
         let price = parseFloat(watch.price)
         const f = new Intl.NumberFormat(undefined)
