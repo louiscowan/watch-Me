@@ -1,7 +1,7 @@
 import Home from './Home.jsx'
 import { Route, Routes } from 'react-router-dom'
 import NavBar from './NavBar';
-import { Provider } from 'react-redux';
+import { Provider, useDispatch } from 'react-redux';
 import thunk from 'redux-thunk'
 import { createStore, applyMiddleware, compose } from 'redux'
 import reducers from '../reducers'
@@ -21,21 +21,21 @@ const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)))
 function App() {
 
   return (
-    <main className='App App-header'>
-      <NavBar />      
-      <WatchBrands/>
-        <Provider store={store}>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/createWatchListing' element={<CreateWatchListing />} />
-            <Route path=':searchedWatch' element={<SearchedWatches />} />
-            <Route path='/singleWatchView/:watchId' element={<SingleWatchView />} />
-            <Route path='/login' element={<Login />} /> 
-            <Route path='/register' element={<Register />} /> 
-            <Route path='/account/:accountId' element={<YourAccount />} />
-          </Routes>
-        </Provider>
-    </main>
+    <Provider store={store}>
+      <main className='App App-header'>
+        <NavBar />      
+        <WatchBrands/>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/createWatchListing' element={<CreateWatchListing />} />
+              <Route path=':searchedWatch' element={<SearchedWatches />} />
+              <Route path='/singleWatchView/:watchId' element={<SingleWatchView />} />
+              <Route path='/login' element={<Login />} /> 
+              <Route path='/register' element={<Register />} /> 
+              <Route path='/account/:accountId' element={<YourAccount />} />
+            </Routes>
+      </main>
+    </Provider>
   );
 }
 

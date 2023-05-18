@@ -15,42 +15,30 @@ function SingleWatchView() {
     const [ price, setPrice] = useState()
 
     const { watchId } = useParams()
-
-    const watches = useSelector(state => state.watches)
     
     useEffect(() => {
-        if(watches.length > 0) {
-       const foundWatch = watches.find(watch => watch.id === watchId)
-       setWatch(foundWatch)
-
-        const imageRef = ref(storage, foundWatch.watchImageUrl)
-          getDownloadURL(imageRef)
-            .then(res => {
-              setImageUrl(res)
-            })
-        } else {
-            console.log("type of watch", typeof watchId, "watch id", watchId)
-            const getWatches = async () => {
-                const watchCollectionRef = collection(db, "watches")
-                const watchData = await getDocs(watchCollectionRef)
-                let singleWatch
-                await watchData.docs.map((doc) => {
-                    if(doc.id === watchId) {
-                        console.log("doc id", doc.id)
-                        singleWatch = {...doc.data(), id: doc.id}
-                        setWatch({...doc.data(), id: doc.id})
-                    }
-                    const imageRef = ref(storage, singleWatch.watchImageUrl)
-                    getDownloadURL(imageRef)
-                    .then(res => {
-                    setImageUrl(res)
-                    })
-                })
-                }
+        const getWatches = async () => {
+            const watchCollectionRef = collection(db, "watches");
+            const watchData = await getDocs(watchCollectionRef);
+          
+            const singleWatch = [];
+            watchData.docs.forEach((doc) => {
+              if (doc.id === watchId) {
+                singleWatch.push({ ...doc.data(), id: doc.id });
+                setWatch({ ...doc.data(), id: doc.id });
+              }
+            });
+          
+            if (singleWatch.length > 0) {
+              const imageRef = ref(storage, singleWatch[0].watchImageUrl);
+              getDownloadURL(imageRef).then((res) => {
+                setImageUrl(res);
+              });
+            }
+          };
+          
             getWatches()
-        }
-        
-    },[])
+    },[watchId])
 
 
 

@@ -16,7 +16,7 @@ function WatchBrands () {
     return (
         <div className="brandArrDiv">
             {watchBrandsArr.map((brand) => {
-                return <button className="brandButton" onClick={() => {showBrandWatches(brand)}}>{brand}</button>
+                return <button key={brand} className="brandButton" onClick={() => {showBrandWatches(brand)}}>{brand}</button>
             })}
         </div>
     )
