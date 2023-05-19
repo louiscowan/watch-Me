@@ -1,7 +1,7 @@
 import Home from './Home.jsx'
 import { Route, Routes } from 'react-router-dom'
 import NavBar from './NavBar';
-import { Provider, useDispatch } from 'react-redux';
+import { Provider} from 'react-redux';
 import thunk from 'redux-thunk'
 import { createStore, applyMiddleware, compose } from 'redux'
 import reducers from '../reducers'
