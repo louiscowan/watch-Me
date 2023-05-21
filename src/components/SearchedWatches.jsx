@@ -8,6 +8,7 @@ import 'firebase/storage'
 import { collection, getDocs } from "@firebase/firestore"
 import { db, storage } from "../firebase"
 import { getDownloadURL, ref } from "firebase/storage"
+import WatchBrands from "./WatchBrands"
 
 function SearchedWatches () {
     const { searchedWatch } = useParams()
@@ -53,6 +54,7 @@ function SearchedWatches () {
 
     return (
         <div className="watchListings">
+          <WatchBrands/>
             {searchedWatches 
             ? searchedWatches.map(watch => <WatchListings key={watch.id} watch={watch}/>) 
             : <p>There are no current listings for your search.</p>}

@@ -8,6 +8,7 @@ import { collection, getDocs } from 'firebase/firestore'
 
 
 import WatchListings from './WatchListings';
+import WatchBrands from './WatchBrands'
 import { addUser, addWatchesAction } from '../actions';
 import { onAuthStateChanged } from 'firebase/auth';
 
@@ -37,6 +38,7 @@ function Home() {
 
   return (
     <div className="App App-header">
+      <WatchBrands />
       <div className='watchListings'>  
         {watches.map((watch, index) => {
           return (
