@@ -33,7 +33,7 @@ function App() {
               <Route path='/login' element={<Login />} /> 
               <Route path='/register' element={<Register />} /> 
               <Route path='/account/:accountId' element={<YourAccount />} />
-              <Route path='*' element={<Navigate to="/" />} />
+              <Route path='*' element={<Home />} />
             </Routes>
       </main>
     </Provider>
