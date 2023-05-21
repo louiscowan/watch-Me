@@ -1,5 +1,5 @@
 import Home from './Home.jsx'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import NavBar from './NavBar';
 import { Provider} from 'react-redux';
 import thunk from 'redux-thunk'
@@ -33,6 +33,7 @@ function App() {
               <Route path='/login' element={<Login />} /> 
               <Route path='/register' element={<Register />} /> 
               <Route path='/account/:accountId' element={<YourAccount />} />
+              <Route path='*' element={<Navigate to="/" />} />
             </Routes>
       </main>
     </Provider>
