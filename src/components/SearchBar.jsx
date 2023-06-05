@@ -11,7 +11,7 @@ function SearchBar () {
 
     function searchWatches(e) {
         e.preventDefault()
-        navigate(`${watchSearch}`)
+        navigate(`/searchedWatch/${watchSearch}`)
       }
 
     return (

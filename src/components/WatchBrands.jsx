@@ -9,7 +9,7 @@ function WatchBrands () {
         if(brand === "All") {
             navigate("/")
         } else {
-            navigate(`/${brand}`)
+            navigate(`/searchedWatch/${brand}`)
         }
     }
 

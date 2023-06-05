@@ -26,12 +26,12 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/createWatchListing' element={<CreateWatchListing />} />
-              <Route path='/:searchedWatch' element={<SearchedWatches />} />
+              <Route path='/searchedWatch/:searchedWatch' element={<SearchedWatches />} />
               <Route path='/singleWatchView/:watchId' element={<SingleWatchView />} />
               <Route path='/login' element={<Login />} /> 
               <Route path='/register' element={<Register />} /> 
               <Route path='/account/:accountId' element={<YourAccount />} />
-              <Route path='*' element={<Home />} />
+              {/* <Route path='*' element={<Home />} /> */}
             </Routes>
       </main>
     </Provider>
