@@ -25,9 +25,9 @@ function YourAccountPopUp ({ user, accountClicked, setAccountClicked, logout }) 
         {accountClicked ? (
           <div ref={accountDetailsRef} className="accountDetailsDiv">
             <ul>
-              <div className="accountSection">
-                <p>{user.displayName}</p>
-                <p>{user.email}</p>
+              <div>
+                <p className="userName">{user.displayName}</p>
+                <p className="userEmail">{user.email}</p>
               </div>
               <div
                 onClick={() => {

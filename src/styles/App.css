@@ -103,6 +103,14 @@
   }
 }
 
+.userName, .userEmail {
+  margin: 0;
+}
+
+.accountSection {
+  margin-top: 1rem;
+}
+
 .accountDetailsDiv {
   position: fixed;
   inset: 0 0 0 80%;
@@ -112,12 +120,15 @@
   justify-content:baseline;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-  /* transform: translateX(100%); */
   transition: transform 350ms ease-out;
 }
 
 .accountDetailsDiv .section {
   max-width:  fit-content;
+}
+
+.section-link {
+  padding-left: 15px;
 }
 
 .section-link:hover {
