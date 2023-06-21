@@ -33,20 +33,21 @@ function NavBar() {
   }
 
   return (
-    <nav className={`navBar`}>
+    <nav className="navBar">
       <div className="logo-search-div">
         <header>
           <h1 onClick={() => navigate('/')} className="logo">Watch Me</h1>
         </header>
-        <SearchBar />
       </div>
+        <SearchBar />
       <div className="user-div">
         {user
           ? <i onClick={handleAccountClick} className="fa-solid fa-2x fa-user-secret"></i>
           : <NavButton buttonWord={'Login'} />
         }
-      </div>
       <YourAccountPopUp user={user} accountClicked={accountClicked} setAccountClicked={setAccountClicked} logout={logout} />
+      </div>
+      <button className="fa-solid fa-bars fa-2xl"></button>
     </nav>
   );
 }

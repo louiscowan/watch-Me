@@ -22,30 +22,28 @@ function YourAccountPopUp ({ user, accountClicked, setAccountClicked, logout }) 
   
     return (
       <>
-        {accountClicked ? 
+        {accountClicked ? (
           <div ref={accountDetailsRef} className="accountDetailsDiv">
             <ul>
-              <section>
-                <li>{user.displayName}</li>
-                <li>{user.email}</li>
-              </section>
-              <hr className="hr" />
-              <section
+              <div className="accountSection">
+                <p>{user.displayName}</p>
+                <p>{user.email}</p>
+              </div>
+              <div
                 onClick={() => {
                   setAccountClicked(false);
                   navigate(`/account/:${user.uid}`);
                 }}
-                className="section-link"
+                className="section-link accountSection"
               >
-                <li>Your Watches</li>
-              </section>
-              <hr className="hr" />
-              <section onClick={logout} className="section-link">
-                <li>Sign Out</li>
-              </section>
+                Your Watches
+              </div>
+              <div onClick={logout} className="section-link accountSection">
+                Sign Out
+              </div>
             </ul>
           </div>
-        : null}
+        ) : null}
       </>
     );
   };

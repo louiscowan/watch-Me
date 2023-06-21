@@ -11,7 +11,11 @@ function SearchBar () {
 
     function searchWatches(e) {
         e.preventDefault()
-        navigate(`/searchedWatch/${watchSearch}`)
+        if(watchSearch === "") {
+            return
+        } else {
+            navigate(`/searchedWatch/${watchSearch}`)
+        }
       }
 
     return (
