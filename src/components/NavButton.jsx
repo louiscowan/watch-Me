@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function NavButton({buttonWord}) {
+function NavButton({buttonWord, buttonClass}) {
 
     const navigate = useNavigate()
 
@@ -15,7 +15,7 @@ function NavButton({buttonWord}) {
     }
 
     return (
-        <button onClick={buttonClicked} className="NavButton">
+        <button onClick={buttonClicked} className={`NavButton ${buttonClass}`}>
             {buttonWord}
          </button>
     )

@@ -39,7 +39,8 @@ function Register() {
             )
     }
 
-    function showPassword () {
+    function showPassword (e) {
+        e.preventDefault()
         if(password === 'password') {
             setPassword("text")
         } else {

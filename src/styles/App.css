@@ -72,12 +72,6 @@
   background-color: rgb(30, 167, 252);
 }
 
-.fa-bars { 
-  border: none;
-  background-color: transparent;
-  display: none;
-}
-
 .navBar {
   position: relative;
   display: flex;
@@ -87,20 +81,11 @@
   padding-bottom: 0.5rem;
   z-index: 50;
   margin-bottom: 10px;
+  max-width: 100%;
 }
 
-@media (max-width: 35em) {
-  .navBar {
-    position: fixed;
-    inset: 0 0 0 40%;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    background-color: steelblue;
-  }
-  .fa-bars {
-    display: block;
-  }
+.mobileAccountButton {
+  display: none;
 }
 
 .userName, .userEmail {
@@ -113,18 +98,19 @@
 
 .accountDetailsDiv {
   position: fixed;
-  inset: 0 0 0 80%;
+  right: 0px;
+  top: 0px;
+  width: max-content;
   flex-direction: column;
   align-items: center;
   display: flex;
-  justify-content:baseline;
+  /* justify-content: baseline; */
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-  transition: transform 350ms ease-out;
 }
 
 .accountDetailsDiv .section {
-  max-width:  fit-content;
+  /* max-width:  fit-content; */
 }
 
 .section-link {
@@ -233,6 +219,7 @@ ul {
   border: 2px solid var(--color-blue);
   border-radius: 50px;
   height: 50px;
+  width:auto;
 }
 
 .searchbar-input {
@@ -251,9 +238,11 @@ input[placeholder="Search Watches ..."] {
   padding-left: 25px;
 }
 
-.searchbar-input:focus {
-  width: calc(var(--width) + 100px);
-  transition: width 1s ease-in-out;
+@media (min-width: 900px) {
+  .searchbar-input:focus {
+    width: calc(var(--width) + 100px);
+    transition: width 1s ease-in-out;
+  }
 }
 
 button[type="submit"]{
@@ -305,7 +294,7 @@ button[type="submit"]{
   margin-left: 10px;
   margin-right: 25px;
   cursor: pointer;
-  font-size: 40.9px;
+  font-size: 2.6rem;
   color: rgb(98, 97, 97);
 }
 
@@ -317,19 +306,57 @@ button[type="submit"]{
 .brandArrDiv {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+@media  screen and (max-width: 600px) {
+  .brandArrDiv {
+    justify-content: flex-start;
+  }
 }
 
 .brandButton {
-  margin: 8px;
+  margin: 8px;            
   padding: 10px;
-  border-radius: 50px;
-  font-size: large;
-  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  font-size: large; 
+  background-color: rgba(95, 178, 229, 0.5);
   cursor: pointer;
+  border: none;
+  min-width: fit-content;
 }
 
 .brandButton:hover {
-  border: 2px solid var(--color-blue)
+  background-color: rgba(176, 183, 188, 0.8);
 }
 
+.mobileNavButton {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navBar {
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .fa-user-secret {
+   display: none;
+  }
+  .logo-search-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .mobileAccountButton {
+    display: contents;
+    margin-right: 20px;
+  }
+  .mobileNavButton {
+    display: block;
+  }
+  .computerDisplayButton {
+    display: none;
+  }
+}

@@ -43,7 +43,6 @@ function SingleWatchView() {
 
 
     useEffect(() => {
-        console.log("watch", watch)
        if(watch) {
         let price = parseFloat(watch.price)
         const f = new Intl.NumberFormat(undefined)

@@ -28,8 +28,11 @@ function NavBar() {
   }
   
   function handleAccountClick () {
-    console.log("clicked");
-    setAccountClicked(!accountClicked);
+    if(accountClicked === false) {
+      setAccountClicked(true);
+    } else {
+      setAccountClicked(true)
+    }
   }
 
   return (
@@ -38,16 +41,19 @@ function NavBar() {
         <header>
           <h1 onClick={() => navigate('/')} className="logo">Watch Me</h1>
         </header>
+        {user
+          ? <i onClick={handleAccountClick} className="fa-solid fa-2x fa-user-secret mobileAccountButton"></i>
+          : <NavButton buttonWord={'Login'} buttonClass={"mobileNavButton"}/>
+        }
       </div>
         <SearchBar />
       <div className="user-div">
         {user
           ? <i onClick={handleAccountClick} className="fa-solid fa-2x fa-user-secret"></i>
-          : <NavButton buttonWord={'Login'} />
+          : <NavButton buttonWord={'Login'} buttonClass={"computerDisplayButton"}/>
         }
       <YourAccountPopUp user={user} accountClicked={accountClicked} setAccountClicked={setAccountClicked} logout={logout} />
       </div>
-      <button className="fa-solid fa-bars fa-2xl"></button>
     </nav>
   );
 }
